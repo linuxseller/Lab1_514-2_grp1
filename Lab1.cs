@@ -176,6 +176,10 @@ namespace Lab1_514_2_grp1
         // Задание 1: матрица на константу
         private void task1Btn_Click(object sender, EventArgs e)
         {
+            if (!fmtx) {
+                MessageBox.Show("Матрица не заполнена!");
+                return;
+            }
             // скрытие всех ячеек результата
             resetResult();
             // Отображение нужных ячеек матрицы
@@ -197,6 +201,11 @@ namespace Lab1_514_2_grp1
         // Задание 2: модуль вектора 1
         private void task2Btn_Click(object sender, EventArgs e)
         {
+            if (!fvec1)
+            {
+                MessageBox.Show("Вектор 1 не заполнен!");
+                return;
+            }
             // скрытие всех ячеек результата
             resetResult();
             // модуль это одно число, отобразим только одну ячейку результата
@@ -214,6 +223,11 @@ namespace Lab1_514_2_grp1
         // Задание 3: скалярное произведение векторов
         private void task3Btn_Click(object sender, EventArgs e)
         {
+            if (!(fvec2 && fvec1))
+            {
+                MessageBox.Show("Вектора не заполнены!");
+                return;
+            }
             // скрытие всех ячеек результата
             resetResult();
             // скалярное произведение это одно число, отобразим только одну ячейку результата
@@ -232,6 +246,11 @@ namespace Lab1_514_2_grp1
         // аналогично первому заданию с произведением матрицы на константу
         private void task5Btn_Click(object sender, EventArgs e)
         {
+            if (!fmtx)
+            {
+                MessageBox.Show("Матрица не заполнена!");
+                return;
+            }
             resetResult();
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < n; j++)
@@ -248,6 +267,11 @@ namespace Lab1_514_2_grp1
         // Задание 4: векторное произведение, определено только для трехмерных векторов
         private void task4Btn_Click(object sender, EventArgs e)
         {
+            if (!(fvec2 && fvec1))
+            {
+                MessageBox.Show("Вектора не заполнены!");
+                return;
+            }
             resetResult();
             // FIXME: вывод ошибки при n!=3
             if (n != 3)
@@ -269,6 +293,11 @@ namespace Lab1_514_2_grp1
         // Задание 7: произведение вектора на константу
         private void task6Btn_Click(object sender, EventArgs e)
         {
+            if (!fvec1)
+            {
+                MessageBox.Show("Вектор 1 не заполнен!");
+                return;
+            }
             // скрытие всех ячеек результата
             resetResult();
             // Отобразим первую строку матрицы результатов, т.к. в результате получаем вектор
